@@ -1,9 +1,9 @@
 <div class="example-form">
 
   <mat-form-field class="example-full-width publication">
-      <textarea matInput placeholder="Textarea" [(ngModel)]="content"></textarea>
+      <textarea matInput placeholder="Write your message..." [(ngModel)]="content"></textarea>
     <mat-hint align="start"><strong>Don't disclose sensible personal info</strong> </mat-hint>
-    <mat-hint align="end"><button class="sendbutton" mat-raised-button color="primary" (click)="shareStory()">Send</button></mat-hint>
+    <mat-hint align="end"><button class="sendbutton" mat-raised-button color="primary" [disabled]= "!content" (click)="shareStory()">Send</button></mat-hint>
   </mat-form-field>
 
 </div>
