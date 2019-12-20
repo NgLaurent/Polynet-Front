@@ -16,6 +16,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {StoryServiceService} from './story-service.service';
+import { LoginComponent } from './login/login.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -24,10 +26,13 @@ import {StoryServiceService} from './story-service.service';
     MenuComponent,
     StoryPublisherComponent,
     StoryFeedComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent,
+    PageNotFoundComponent
   ],
   imports: [
     // tslint:disable-next-line:max-line-length
+    AppRoutingModule,
     MatButtonModule, MatFormFieldModule, MatNativeDateModule, MatInputModule, BrowserAnimationsModule, MatToolbarModule, MatIconModule, _MatMenuDirectivesModule, MatMenuModule, FormsModule, HttpClientModule, MatCardModule
   ],
   providers: [StoryServiceService],
